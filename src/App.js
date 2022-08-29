@@ -1,8 +1,9 @@
-import { Link, Route, Routes } from 'react-router-dom';
+// import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 // import { CardList } from './CardList';
 import { Button } from "@mui/material";
 
+//Declaring the Card Items by declaring the Variable (Array of Objects)
 const cardlist=
   [{
     select:"FREE",
@@ -18,7 +19,7 @@ const cardlist=
     reports:"Monthly status"
   },
   {
-    select:"Plus",
+    select:"PLUS",
     price:"$9",
     month:"/month",
     name:"5 User",
@@ -49,10 +50,12 @@ const cardlist=
 
 function App() 
 {
+  //Storing the Cardlist in Items variable
   const Items=cardlist;
 
 
 return (
+  //Render page
     <div className="App">
      {/* <nav>
       <ul>
@@ -71,7 +74,7 @@ return (
     </div>
   );
 }
-
+//Creating a new component to render the Cardlist 
 function ShowCard({card})
 {
   return(
